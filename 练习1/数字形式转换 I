@@ -1,0 +1,5 @@
+num = input() #获取输入的一个整数字符串
+cn = "零一二三四五六七八九" #建立从零到九对应 的中文数字字符串
+for i in num: #遍历整数字符串
+    cn_num = cn[int(i)] #将字符串i定义整数之后以i为引索赋值给cn_num
+    print(cn_num, end='') #不换行输出cn_num
