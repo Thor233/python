@@ -1,0 +1,19 @@
+def c_to_f(temp): #定义摄氏度C转华氏度F函数
+    temp = temp * 1.8 + 32
+    return temp
+    
+def f_to_c(temp): #定义华氏度F转摄氏度C函数
+    temp = (temp - 32) / 1.8
+    return temp
+
+temp = input()#获取输入
+temp = temp.lower() #小写所有英文, 以便之后的比对
+num = float(temp[0:-1])
+if temp[-1] == "c": #通过比对单位, 确定输入是摄氏度还是华氏度
+    num = c_to_f(num) #确定是摄氏度转华氏度后,调用摄氏度转华氏度函数
+    print('{:.2f}F'.format(num)) #格式化输出,保留两位小数,带大写字母为单位
+elif temp[-1] == 'f':
+    num = f_to_c(num)
+    print('{:.2f}C'.format(num))
+else:
+    print('输入格式错误')
